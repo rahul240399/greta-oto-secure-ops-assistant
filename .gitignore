@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Generated corpus & index (rebuild with scripts/build_index.py)
+corpus/
+chroma_db/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/

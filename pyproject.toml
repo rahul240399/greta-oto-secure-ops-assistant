@@ -1,0 +1,9 @@
+[project]
+name = "secureops-assistant"
+version = "0.1.0"
+description = "Grounded RAG assistant for OT/ICS cybersecurity guidance (NIST SP 800-82, CSF 2.0, CISA ICS advisories)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

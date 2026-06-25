@@ -1,0 +1,38 @@
+# SecureOps Assistant — runtime configuration.
+# Every tunable lives here so experiments are reproducible (no magic numbers in code).
+
+corpus:
+  dir: corpus
+  pdfs:
+    nist_sp800_82r3.pdf: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf
+    nist_csf_2_0.pdf: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+  cisa_feed_url: https://www.cisa.gov/cybersecurity-advisories/ics-advisories.xml
+  cisa_n_advisories: 50          # raise toward 50-200 for a real corpus
+
+chunking:
+  strategy: structure_aware      # naive | structure_aware
+  size: 1000                     # target characters per chunk
+  overlap: 150                   # characters shared between neighbouring chunks
+
+index:
+  persist_dir: ./chroma_db
+  collection: secureops
+  embed_model: all-MiniLM-L6-v2  # try BAAI/bge-small-en-v1.5 and measure
+  batch_size: 256
+
+retrieval:
+  top_k: 5                       # final blocks passed to the LLM
+  candidate_k: 20                # pre-rerank pool size
+  hybrid: true                   # BM25 + dense fused with Reciprocal Rank Fusion
+  rrf_k: 60                      # RRF damping constant
+  rerank: true                   # cross-encoder reranking of the candidate pool
+  reranker_model: cross-encoder/ms-marco-MiniLM-L-6-v2
+
+generation:
+  model: gemini-2.5-flash
+  max_retries: 3
+
+guardrails:
+  max_question_chars: 2000
+  sanitize_context: true         # neutralise instruction-like text in retrieved chunks
+  enforce_citations: true        # report citations that point to non-existent blocks

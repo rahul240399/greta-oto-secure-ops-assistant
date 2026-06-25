@@ -1,0 +1,151 @@
+[
+  {
+    "id": "n1",
+    "type": "answerable",
+    "question": "What does NIST recommend regarding remote access to OT networks?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "remote access",
+      "vpn"
+    ]
+  },
+  {
+    "id": "n2",
+    "type": "answerable",
+    "question": "How do OT security priorities differ from IT security priorities?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "availability",
+      "safety"
+    ]
+  },
+  {
+    "id": "n3",
+    "type": "answerable",
+    "question": "How should an OT network be segmented from the corporate IT network?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "segment",
+      "dmz",
+      "zone"
+    ]
+  },
+  {
+    "id": "n4",
+    "type": "answerable",
+    "question": "What is the defense-in-depth strategy for OT security?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "defense-in-depth",
+      "layer"
+    ]
+  },
+  {
+    "id": "n5",
+    "type": "answerable",
+    "question": "What firewall policy does NIST recommend between IT and OT networks?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "firewall",
+      "deny"
+    ]
+  },
+  {
+    "id": "n6",
+    "type": "answerable",
+    "question": "Why is least privilege important for OT access control?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": "least privilege"
+  },
+  {
+    "id": "n7",
+    "type": "answerable",
+    "question": "How should wireless communications in OT environments be protected?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "wireless",
+      "encrypt"
+    ]
+  },
+  {
+    "id": "n8",
+    "type": "answerable",
+    "question": "What physical security measures does NIST recommend for OT assets?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "physical"
+    ]
+  },
+  {
+    "id": "n9",
+    "type": "answerable",
+    "question": "How should patch and vulnerability management be handled in OT systems?",
+    "gold_source": "nist_sp800_82",
+    "gold_phrase": [
+      "patch",
+      "vulnerab"
+    ]
+  },
+  {
+    "id": "f1",
+    "type": "answerable",
+    "question": "What are the core functions of the NIST Cybersecurity Framework?",
+    "gold_source": "nist_csf",
+    "gold_phrase": [
+      "govern",
+      "identify",
+      "protect",
+      "detect",
+      "respond",
+      "recover"
+    ]
+  },
+  {
+    "id": "f2",
+    "type": "answerable",
+    "question": "What is the purpose of the GOVERN function in the NIST CSF?",
+    "gold_source": "nist_csf",
+    "gold_phrase": [
+      "govern"
+    ]
+  },
+  {
+    "id": "c1",
+    "type": "answerable",
+    "question": "What CISA advisory affects Rockwell Automation products and what is recommended?",
+    "gold_source": "CISA",
+    "gold_phrase": "rockwell"
+  },
+  {
+    "id": "c2",
+    "type": "answerable",
+    "question": "Summarise the CISA advisory affecting Schneider Electric products.",
+    "gold_source": "CISA",
+    "gold_phrase": "schneider"
+  },
+  {
+    "id": "h1",
+    "type": "unanswerable",
+    "question": "What is our company's firewall configuration?"
+  },
+  {
+    "id": "h2",
+    "type": "unanswerable",
+    "question": "What is the IP address of our SCADA server?"
+  },
+  {
+    "id": "h3",
+    "type": "unanswerable",
+    "question": "How many analysts are on our security team?"
+  },
+  {
+    "id": "h4",
+    "type": "unanswerable",
+    "question": "What is the share price of Siemens today?"
+  },
+  {
+    "id": "h5",
+    "type": "unanswerable",
+    "question": "When is the next scheduled maintenance window for our plant?"
+  }
+]
